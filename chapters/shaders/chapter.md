@@ -168,7 +168,7 @@ That should look like the following when you run it:
 
 ![IMG](images/001.png)
 
-Let's break some of the things in there down a little bit. At the top of the fragment and vertex shaders, you can see a lot of "uniforms". A uniform is a value passed to each shader from your program that sets some additional values that you use at each stage of your shading. Uniform variables act as constants, at least for the duration of your OF applications *draw()* method. You're OF application feeds these variables to the graphics pipeline so that they're accessible in both stages of shading. Any shader can access any uniform variable as long as it declares the variable like we do in both shaders in our example. Note though that these variables are read-only in the shaders. If you want to update the value of a uniform, you can do it in your OF application by calling:
+Let's break some of the things in there down a little bit. At the top of the fragment and vertex shaders, you can see a lot of "uniforms". A uniform is a value passed to each shader from your program that sets some additional values that you use at each stage of your shading. Uniform variables act as constants, at least for the duration of your OF applications *draw()* method. Your OF application feeds these variables to the graphics pipeline so that they're accessible in both stages of shading. Any shader can access any uniform variable as long as it declares the variable like we do in both shaders in our example. Note though that these variables are read-only in the shaders. If you want to update the value of a uniform, you can do it in your OF application by calling:
 
 ```cpp
 shader.setUniform1f("myUniform", 1.f);
